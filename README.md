@@ -7,7 +7,7 @@ server {
 
        server_name www.prolab.kg prolab.kg;
 
-       root /var/www/soon_landing
+       root /var/www/soon_landing;
        index index.html;
 
        location / {
