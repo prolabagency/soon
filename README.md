@@ -5,7 +5,7 @@ server {
        listen 80;
        listen [::]:80;
 
-       server_name prolab.kg www.rolab.kg;
+       server_name www.prolab.kg prolab.kg;
 
        root /var/www/soon_landing
        index index.html;
