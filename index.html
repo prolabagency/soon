@@ -36,7 +36,8 @@
           heading: "Сайт находится на техническом обслуживании",
           keywords: "PROlab Agency, разработка сайтов, мобильные приложения, IT-курсы, программирование Ош, PROlab Academy",
           description: "Сайт будет доступен в ближайшее время. Спасибо за ваше терпение!",
-          linkText: "Перейти на prolabagency.com"
+          linkText: "Перейти на prolabagency.com",
+          url: `https://prolabagency.com${urlParams}`
         },
         en: {
           lang: "en",
@@ -44,7 +45,8 @@
           heading: "Maintenance Mode Active",
           keywords: "PROlab Agency, web development, mobile apps, IT courses, programming Osh, PROlab Academy",
           description: "The site will be available soon. Thank you for your patience!",
-          linkText: "Visit prolabagency.com"
+          linkText: "Visit prolabagency.com",
+          url: `https://prolabagency.com${urlParams}`
         },
         kg: {
           lang: "kg",
@@ -52,13 +54,17 @@
           heading: "Техникалык тейлөө режими активдүү",
           keywords: "PROlab Agency, сайт иштеп чыгуу, мобилдик тиркемелер, IT-курстар, программалоо Ош, PROlab Academy",
           description: "Сайт жакында жеткиликтүү болот. Сиздин чыдамкайлыгыңыз үчүн рахмат!",
-          linkText: "prolabagency.com сайтына өтүңүз"
+          linkText: "prolabagency.com сайтына өтүңүз",
+          url: `https://prolabagency.com${urlParams}`
         },
       };
 
       function setLanguage() {
         const userLang = navigator.language || navigator.userLanguage;
         const lang = userLang.includes('kg') ? 'kg' : userLang.includes('ru') ? 'ru' : 'en';
+
+        const currentDomain = window.location.hostname;  // Получаем текущий домен
+        const urlParams = `?ref=${currentDomain}`;  // Создаем строку с параметрами
         
         // Устанавливаем язык страницы
         document.documentElement.lang = messages[lang].lang;
@@ -74,6 +80,7 @@
         document.getElementById('heading').textContent = messages[lang].heading;
         document.getElementById('description').textContent = messages[lang].description;
         document.getElementById('prolab-link').textContent = messages[lang].linkText;
+        document.getElementById('prolab-link').href = messages[lang].url;  // Устанавливаем ссылку с параметром
       }
 
       window.onload = setLanguage;
