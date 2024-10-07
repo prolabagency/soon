@@ -67,7 +67,7 @@
         document.title = messages[lang].title;
         document.querySelector('meta[name="description"]').setAttribute("content", messages[lang].description);
         document.querySelector('meta[name="keywords"]').setAttribute("content", messages[lang].keywords);
-        document.querySelector('meta[property="og:description"]').setAttribute("content", messages[lang].ogDescription);
+        document.querySelector('meta[property="og:description"]').setAttribute("content", messages[lang].description);
         
         // Обновление контента
         document.getElementById('site-title').textContent = messages[lang].title;
