@@ -74,12 +74,12 @@
         document.getElementById('heading').textContent = messages[lang].heading;
         document.getElementById('description').textContent = messages[lang].description;
         document.getElementById('prolab-link').textContent = messages[lang].linkText;
-      }
 
         // Получаем текущий домен и добавляем его в качестве параметра к ссылке
         const currentDomain = window.location.hostname;
         const prolabLink = document.getElementById('prolab-link');
         prolabLink.href = `https://prolabagency.com?referrer=${currentDomain}`;
+      }
 
       window.onload = setLanguage;
     </script>
