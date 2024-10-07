@@ -33,9 +33,9 @@
         ru: {
           lang: "ru",
           title: "PROlab Agency",
-          description: "Сайт находится на техническом обслуживании",
+          heading: "Сайт находится на техническом обслуживании",
           keywords: "PROlab Agency, разработка сайтов, мобильные приложения, IT-курсы, программирование Ош, PROlab Academy",
-          ogDescription: "Сайт будет доступен в ближайшее время. Спасибо за ваше терпение!",
+          description: "Сайт будет доступен в ближайшее время. Спасибо за ваше терпение!",
           linkText: "Перейти на prolabagency.com"
         },
         en: {
@@ -71,7 +71,8 @@
         
         // Обновление контента
         document.getElementById('site-title').textContent = messages[lang].title;
-        document.getElementById('heading').textContent = messages[lang].description;
+        document.getElementById('heading').textContent = messages[lang].heading;
+        document.getElementById('description').textContent = messages[lang].description;
         document.getElementById('prolab-link').textContent = messages[lang].linkText;
       }
 
