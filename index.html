@@ -1,82 +1,119 @@
 <!DOCTYPE html>
-<html lang="ru-RU">
+<html lang="ru">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
+    <meta charset="UTF-8" />
     <title>PROlab Agency - Сайт находится на техническом обслуживании</title>
-    <meta
-      name="viewport"
-      content="width=device-width, maximum-scale=1, initial-scale=1, minimum-scale=1"
-    />
-    <meta name="description" content="prolab.kg, prolab.academy, курсы программирования ош, it academy ош" />
-    <meta http-equiv="X-UA-Compatible" content="" />
-    <meta
-      property="og:site_name"
-      content="PROlab Agency, prolab.academy, курсы программирования ош, it academy ош"
-    />
-    <meta
-      property="og:title"
-      content="Сайт находится на техническом обслуживании"
-    />
-    <meta property="og:type" content="Maintenance" />
-    <meta
-      property="og:description"
-      content="Сайт будет доступен в ближайшее время. Спасибо за ваше терпение!"
-    />
-    <link rel="stylesheet" id="mtnc-style-css" href="./style.css" media="all" />
-    <link rel="stylesheet" id="mtnc-fonts-css" href="./fonts.css" media="all" />
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, minimum-scale=1" />
+    
+    <!-- Мета-теги для SEO -->
+    <meta name="description" content="PROlab Agency - Разработка веб-сайтов, мобильных приложений, курсы программирования, IT-услуги в Оше и Бишкеке. Сайт находится на техническом обслуживании." />
+    <meta name="keywords" content="PROlab Agency, разработка сайтов, мобильные приложения, IT-курсы, программирование Ош, PROlab Academy" />
+    
+    <!-- Open Graph для соцсетей -->
+    <meta property="og:site_name" content="PROlab Agency" />
+    <meta property="og:title" content="Сайт находится на техническом обслуживании" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://prolabagency.com" />
+    <meta property="og:description" content="Сайт будет доступен в ближайшее время. Спасибо за ваше терпение!" />
+    <meta property="og:image" content="https://prolabagency.com/images/logo.png" />
+    
+    <!-- Hreflang для разных языков -->
+    <link rel="alternate" href="https://prolabagency.com" hreflang="ru" />
+    <link rel="alternate" href="https://prolabagency.com/en" hreflang="en" />
+    <link rel="alternate" href="https://prolabagency.com/kg" hreflang="kg" />
+    
+    <!-- Стили -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./fonts.css" />
     <link rel="stylesheet" href="./my.css" />
+    
+    <script>
+      // Определение языка браузера и установка текста в зависимости от языка
+      const messages = {
+        ru: {
+          lang: "ru",
+          title: "PROlab Agency",
+          description: "Сайт находится на техническом обслуживании",
+          keywords: "PROlab Agency, разработка сайтов, мобильные приложения, IT-курсы, программирование Ош, PROlab Academy",
+          ogDescription: "Сайт будет доступен в ближайшее время. Спасибо за ваше терпение!",
+          linkText: "Перейти на prolabagency.com"
+        },
+        en: {
+          lang: "en",
+          title: "PROlab Agency",
+          description: "Maintenance Mode Active",
+          keywords: "PROlab Agency, web development, mobile apps, IT courses, programming Osh, PROlab Academy",
+          ogDescription: "The site will be available soon. Thank you for your patience!",
+          linkText: "Visit prolabagency.com"
+        },
+        kg: {
+          lang: "kg",
+          title: "PROlab Agency",
+          description: "Техникалык тейлөө режими активдүү",
+          keywords: "PROlab Agency, сайт иштеп чыгуу, мобилдик тиркемелер, IT-курстар, программалоо Ош, PROlab Academy",
+          ogDescription: "Сайт жакында жеткиликтүү болот. Сиздин чыдамкайлыгыңыз үчүн рахмат!",
+          linkText: "prolabagency.com сайтына өтүңүз"
+        },
+      };
+
+      function setLanguage() {
+        const userLang = navigator.language || navigator.userLanguage;
+        const lang = userLang.includes('kg') ? 'kg' : userLang.includes('ru') ? 'ru' : 'en';
+        
+        // Устанавливаем язык страницы
+        document.documentElement.lang = messages[lang].lang;
+
+        // Динамическое изменение мета-тегов и title
+        document.title = messages[lang].title;
+        document.querySelector('meta[name="description"]').setAttribute("content", messages[lang].description);
+        document.querySelector('meta[name="keywords"]').setAttribute("content", messages[lang].keywords);
+        document.querySelector('meta[property="og:description"]').setAttribute("content", messages[lang].ogDescription);
+        
+        // Обновление контента
+        document.getElementById('site-title').textContent = messages[lang].title;
+        document.getElementById('heading').textContent = messages[lang].description;
+        document.getElementById('prolab-link').textContent = messages[lang].linkText;
+      }
+
+      window.onload = setLanguage;
+    </script>
   </head>
 
   <body class="maintenance">
     <div class="main-container">
-      <div class="preloader" style="display: none">
-        <i class="fi-widget" aria-hidden="true"></i>
-      </div>
       <div id="wrapper" style="visibility: visible">
         <div class="center logotype">
           <header>
             <div class="logo-box istext" rel="home">
-              <h1 class="site-title">PROlab Agency</h1>
+              <h1 class="site-title" id="site-title">PROlab Agency</h1>
             </div>
           </header>
         </div>
-        <div
-          id="content"
-          class="site-content"
-          style="position: absolute; top: 308.5px"
-        >
+        <div id="content" class="site-content">
           <div class="center">
-            <h2
-              class="heading font-center"
-              style="font-weight: 300; font-style: normal"
-            >
-              Режим обслуживания активен
+            <h2 class="heading font-center" id="heading" style="font-weight: 300; font-style: normal">
+              Сайт будет доступен в ближайшее время. Спасибо за ваше терпение!
             </h2>
-            <div
-              class="description"
-              style="font-weight: 300; font-style: normal"
-            >
+            <div class="description" style="font-weight: 300; font-style: normal">
+              <p id="description">Сайт будет доступен в ближайшее время. Спасибо за ваше терпение!</p>
               <p>
-                Сайт будет доступен в ближайшее время. Спасибо за ваше терпение!
+                <a href="https://prolabagency.com" id="prolab-link" style="font-weight: 500;">
+                  Перейти на prolabagency.com
+                </a>
               </p>
             </div>
           </div>
         </div>
       </div>
-      <!-- end wrapper -->
       <footer>
         <div class="center">
-          <div style="font-weight: 300; font-style: normal">
-            © PROlab
-            <script>
-              document.write(new Date().getFullYear())
-            </script>
+          <div style="font-weight: 300; font-style: normal" id="copyright">
+            © PROlab <script>document.write(new Date().getFullYear())</script>
           </div>
         </div>
       </footer>
       <picture class="bg-img">
-        <img src="./mt-sample-background.jpeg" />
+        <img src="./mt-sample-background.jpeg" alt="background image" />
       </picture>
     </div>
   </body>
