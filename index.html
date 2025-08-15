@@ -33,26 +33,26 @@
         ru: {
           lang: "ru",
           title: "PROlab Agency",
-          heading: "Сайт находится на техническом обслуживании",
+          heading: "Скоро здесь будет кое-что новое! 🚀",
           keywords: "PROlab Agency, разработка сайтов, мобильные приложения, IT-курсы, программирование Ош, PROlab Academy",
-          description: "Сайт будет доступен в ближайшее время. Спасибо за ваше терпение!",
-          linkText: "Перейти на prolabagency.com",
+          description: "Пока мы готовим обновление, загляните на наш сайт PROlab Agency — мы создаём сайты, приложения и автоматизируем бизнес.",
+          linkText: "Перейти на сайт PROlab Agency",
         },
         en: {
           lang: "en",
           title: "PROlab Agency",
-          heading: "Maintenance Mode Active",
+          heading: "Something new is coming soon! 🚀",
           keywords: "PROlab Agency, web development, mobile apps, IT courses, programming Osh, PROlab Academy",
-          description: "The site will be available soon. Thank you for your patience!",
-          linkText: "Visit prolabagency.com",
+          description: "While we prepare our update, check out our PROlab Agency website — we create websites, apps, and automate businesses.",
+          linkText: "Visit PROlab Agency site",
         },
         kg: {
           lang: "kg",
           title: "PROlab Agency",
-          heading: "Техникалык тейлөө режими активдүү",
+          heading: "Жакында бул жерде жаңы нерсе пайда болот! 🚀",
           keywords: "PROlab Agency, сайт иштеп чыгуу, мобилдик тиркемелер, IT-курстар, программалоо Ош, PROlab Academy",
-          description: "Сайт жакында жеткиликтүү болот. Сиздин чыдамкайлыгыңыз үчүн рахмат!",
-          linkText: "prolabagency.com сайтына өтүңүз",
+          description: "Биз жаңыланууну даярдап жатканда, PROlab Agency сайтына баш багыңыз — биз сайттарды, тиркемелерди түзөбүз жана бизнес автоматташтырабыз.",
+          linkText: "PROlab Agency сайтына өтүңүз",
         },
       };
 
@@ -74,11 +74,17 @@
         document.getElementById('heading').textContent = messages[lang].heading;
         document.getElementById('description').textContent = messages[lang].description;
         document.getElementById('prolab-link').textContent = messages[lang].linkText;
-
         // Получаем текущий домен и добавляем его в качестве параметра к ссылке
         const currentDomain = window.location.hostname;
         const prolabLink = document.getElementById('prolab-link');
         prolabLink.href = `https://prolabagency.com?referrer=${currentDomain}`;
+        prolabLink.style.display = "inline-block";
+        prolabLink.style.padding = "15px 25px";
+        prolabLink.style.background = "#006eff";
+        prolabLink.style.color = "#fff";
+        prolabLink.style.borderRadius = "8px";
+        prolabLink.style.textDecoration = "none";
+        prolabLink.style.fontSize = "18px";
       }
 
       window.onload = setLanguage;
@@ -98,13 +104,17 @@
         <div id="content" class="site-content">
           <div class="center">
             <h2 class="heading font-center" id="heading" style="font-weight: 300; font-style: normal">
-              Сайт будет доступен в ближайшее время. Спасибо за ваше терпение!
+              Скоро здесь будет кое-что новое! 🚀
             </h2>
             <div class="description" style="font-weight: 300; font-style: normal">
-              <p id="description">Сайт будет доступен в ближайшее время. Спасибо за ваше терпение!</p>
+              <p id="description">Пока мы готовим обновление, загляните на наш сайт PROlab Agency — мы создаём сайты, приложения и автоматизируем бизнес.</p>
               <p>
-                <a href="https://prolabagency.com" id="prolab-link" style="font-weight: 500;">
-                  Перейти на prolabagency.com
+                <a
+                  href="https://prolabagency.com"
+                  id="prolab-link"
+                  style="display:inline-block; padding:15px 25px; background:#006eff; color:#fff; border-radius:8px; text-decoration:none; font-size:18px;"
+                >
+                  Перейти на сайт PROlab Agency
                 </a>
               </p>
             </div>
